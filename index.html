@@ -2,11 +2,211 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Hello!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOX CAFE workshop Form</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/b4b537d91b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <p>Hello, world!</p>
+  <section class="section has-background-warning">
+    <div class="container">
+      <h1 class="title">
+        FOX CAFE workshop アンケートフォーム
+      </h1>
+      <div class="tags has-addons">
+        <span class="tag is-dark">#1</span>
+        <span class="tag is-size-7">エンジニアの工数・スケジュールの出し方、伝え方</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> お名前</label>
+        <div class="control">
+          <input class="input" name="name" type="text" placeholder="名前を入力してね" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> 参加して良かった度</label>
+        <div class="control columns">
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer1" value="5">
+              5
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer1" value="4">
+              4
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer1" value="3" checked>
+              3
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer1" value="2">
+              2
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer1" value="1">
+              1
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> 為になった度</label>
+        <div class="control columns">
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer2" value="5">
+              5
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer2" value="4">
+              4
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer2" value="3" checked>
+              3
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer2" value="2">
+              2
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer2" value="1">
+              1
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> また参加したい度</label>
+        <div class="control columns">
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer3" value="5">
+              5
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer3" value="4">
+              4
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer3" value="3" checked>
+              3
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer3" value="2">
+              2
+            </label>
+          </div>
+          <div class="column has-text-centered">
+            <label class="radio block">
+              <input type="radio" name="answer3" value="1">
+              1
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> ご意見・ご感想</label>
+        <div class="control">
+          <textarea name="message" class="textarea" placeholder="参加した感想や、今後してほしい事など" required></textarea>
+        </div>
+      </div>
+
+      <div class="control">
+        <button class="button is-link" onclick="openModal()">Check</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Q’re Form</strong> by <a href="https://www.fox-hound.co.jp/">FOX HOUND</a> IT Consulting Division
+      </p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">入力内容</p>
+        <button class="delete" aria-label="close" onclick="closeModal()"></button>
+      </header>
+      <section class="modal-card-body">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>お名前</td>
+              <td id="name"></td>
+            </tr>
+            <tr>
+              <td>参加して良かった度</td>
+              <td id="answer1"></td>
+            </tr>
+            <tr>
+              <td>為になった度</td>
+              <td id="answer2"></td>
+            </tr>
+            <tr>
+              <td>また参加したい度</td>
+              <td id="answer3"></td>
+            </tr>
+            <tr>
+              <td>ご意見・ご感想</td>
+              <td id="message"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="post()">Submit</button>
+        <button class="button" onclick="closeModal()">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>
