@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FOX CAFE workshop Form</title>
+  <title>Coding Quiz Form</title>
   <link rel="stylesheet" href="css/bulma.min.css">
   <link rel="stylesheet" href="css/form.css">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
@@ -13,11 +13,13 @@
   <section class="section has-background-warning">
     <div class="container">
       <h1 class="title">
-        FOX CAFE workshop アンケートフォーム
+        postCodingQuiz
       </h1>
       <div class="tags has-addons">
-        <span class="tag is-dark">#1</span>
-        <span class="tag is-size-7">エンジニアの工数・スケジュールの出し方、伝え方</span>
+        <span class="tag is-dark">Link</span>
+        <span class="tag is-danger"><a href="https://www.codewars.com">codewars</a></span>
+        <span class="tag is-info"><a href="https://paiza.io/ja">paiza.io</a></span>
+        <span class="tag is-primary"><a href="https://ideone.com/">ideone</a></span>
       </div>
     </div>
   </section>
@@ -25,124 +27,44 @@
   <section class="section">
     <div class="container">
       <div class="field">
-        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> お名前</label>
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> Title</label>
         <div class="control">
-          <input class="input" name="name" type="text" placeholder="名前を入力してね" required>
+          <input class="input" name="title" type="text" placeholder="タイトル" required>
         </div>
       </div>
 
       <div class="field">
-        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> 参加して良かった度</label>
-        <div class="control columns">
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer1" value="5">
-              5
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer1" value="4">
-              4
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer1" value="3" checked>
-              3
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer1" value="2">
-              2
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer1" value="1">
-              1
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> 為になった度</label>
-        <div class="control columns">
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer2" value="5">
-              5
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer2" value="4">
-              4
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer2" value="3" checked>
-              3
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer2" value="2">
-              2
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer2" value="1">
-              1
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> また参加したい度</label>
-        <div class="control columns">
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer3" value="5">
-              5
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer3" value="4">
-              4
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer3" value="3" checked>
-              3
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer3" value="2">
-              2
-            </label>
-          </div>
-          <div class="column has-text-centered">
-            <label class="radio block">
-              <input type="radio" name="answer3" value="1">
-              1
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> ご意見・ご感想</label>
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> Description</label>
         <div class="control">
-          <textarea name="message" class="textarea" placeholder="参加した感想や、今後してほしい事など" required></textarea>
+          <textarea name="description" class="textarea" placeholder="説明" required></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> Language</label>
+        <div class="control">
+          <input class="input" name="language" type="text" placeholder="言語" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><span class="icon has-text-danger"><i class="fas fa-exclamation"></i></span> Difficulty</label>
+        <div class="control">
+          <input class="input" name="difficulty" type="text" placeholder="難易度" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Example</label>
+        <div class="control">
+          <textarea name="example" class="textarea" placeholder="例" required></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Template</label>
+        <div class="control">
+          <textarea name="template" class="textarea" placeholder="テンプレ" required></textarea>
         </div>
       </div>
 
@@ -155,7 +77,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Q’re Form</strong> by <a href="https://www.fox-hound.co.jp/">FOX HOUND</a> IT Consulting Division
+        <strong>Coding Quiz Form</strong>
       </p>
     </div>
   </footer>
@@ -177,24 +99,28 @@
           </thead>
           <tbody>
             <tr>
-              <td>お名前</td>
-              <td id="name"></td>
+              <td>Title</td>
+              <td id="title"></td>
             </tr>
             <tr>
-              <td>参加して良かった度</td>
-              <td id="answer1"></td>
+              <td>Description</td>
+              <td id="description"></td>
             </tr>
             <tr>
-              <td>為になった度</td>
-              <td id="answer2"></td>
+              <td>Language</td>
+              <td id="language"></td>
             </tr>
             <tr>
-              <td>また参加したい度</td>
-              <td id="answer3"></td>
+              <td>Difficulty</td>
+              <td id="difficulty"></td>
             </tr>
             <tr>
-              <td>ご意見・ご感想</td>
-              <td id="message"></td>
+              <td>Example</td>
+              <td id="example"></td>
+            </tr>
+            <tr>
+              <td>Template</td>
+              <td id="template"></td>
             </tr>
           </tbody>
         </table>
